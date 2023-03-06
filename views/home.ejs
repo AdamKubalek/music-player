@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MusicPlayer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="menu">
+        <div class="fox_text">
+          <img class="foxplayerImg" src="img/foxplayer.png" alt="foxplayer" />
+          <p class="playlistP">Playlists</p>
+        </div>
+        <div class="addplaylist_Artwork">
+          <img
+            class="addplaylist"
+            src="img/addplaylist.png"
+            alt="addplaylist"
+          />
+          <img class="artwork" src="img/artwork.jpg" />
+        </div>
+      </div>
+      <div class="titles">
+        <div class="title_subtitle">
+          <h1>Drink The Sea: The Remixes Vol. 2</h1>
+          <p>The Glitch Mob</p>
+        </div>
+        <div class="addplaylist_star">
+          <img class="addplaylist" src="img/addplaylist.png" />
+          <img class="star" src="img/star.svg" />
+        </div>
+      </div>
+      <div class="playlists"></div>
+      <div class="songs"></div>
+      <div class="control-bar">
+        <img class="rewindBack" src="img/rewind.svg" alt="rewind" />
+        <img class="playPause" src="img/play.svg" alt="pause" />
+        <img class="rewindForward" src="img/rewind.svg" alt="rewind" />
+
+        <audio id="audioTrack" ontimeupdate="updateTrackTime(this)" src="">
+          Audio tag not supported in this browser
+        </audio>
+        <p class="currentTime">0:00</p>
+
+        <input
+          class="audioSlider"
+          type="range"
+          min="0"
+          max="100"
+          step="0.001"
+          value="0"
+        />
+
+        <p class="duration">0:00</p>
+
+        <img class="shuffle" src="img/shuffle.svg" alt="shuffle" />
+
+        <input
+          class="volumeSlider"
+          type="range"
+          min="0"
+          max="1"
+          step="0.001"
+          value="0.5"
+          data-buffer="60"
+        />
+
+        <img class="volume" src="img/volume.svg" alt="volume" />
+      </div>
+    </main>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
